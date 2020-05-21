@@ -23,10 +23,6 @@
   }
 
   function showPosition(position) {
-    lat1 = lat2;
-    lon1 = lon2;
-    lat2 = position.coords.latitude;
-    lon2 = position.coords.longitude;
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude +
       "<br>Direction: " + position.coords.heading;
