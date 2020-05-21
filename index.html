@@ -25,7 +25,8 @@
   function showPosition(position) {
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude +
-      "<br>Direction: " + position.coords.heading;
+      "<br>Direction: " + position.coords.heading +
+        "<br>Heading_available: " + significantLocationChangeMonitoringAvailable();
 
   }
   </script>
