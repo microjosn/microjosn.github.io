@@ -24,10 +24,21 @@
     }
   }
     
+    
+    
+      
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function(event) {
-        // alpha: rotation around z-axis
-        var rotateDegrees = event.alpha;
+        var rotateDegrees;
+        
+        if(event.webkitCompassHeading) {
+          // För Apple, rotation around z-axis
+          rotateDegrees = event.webkitCompassHeading;  
+        }
+        else {
+          // For android, alpha: rotation around z-axis
+          rotateDegrees = event.alpha;
+        }
         // gamma: left to right
         var leftToRight = event.gamma;
         // beta: front back motion
