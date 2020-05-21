@@ -13,11 +13,7 @@
 
   <script>
   var x = document.getElementById("demo");
-  var lat1 = 0;
-  var lon1 = 0;
-  var lat2 = 0;
-  var lon2 = 0;
-
+    
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition(showPosition);
@@ -33,8 +29,7 @@
     lon2 = position.coords.longitude;
     x.innerHTML = "Latitude: " + position.coords.latitude + 
     "<br>Longitude: " + position.coords.longitude +
-      "<br>Direction: " + position.coords.heading + 
-      "<br>delta Km:" + getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2);
+      "<br>Direction: " + position.coords.heading;
     
   }
     
