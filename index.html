@@ -27,8 +27,8 @@
     
     
       
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function(event) {
+
+window.addEventListener("deviceorientation", function(event) {
         var rotateDegrees;
         
         if(event.webkitCompassHeading) {
@@ -46,7 +46,6 @@
 
         handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
     }, true);
-}
 
 var handleOrientationEvent = function(beta, gamma, alpha) {
     x2.innerHTML = "Alpha :" + alpha +"<br>" + 
